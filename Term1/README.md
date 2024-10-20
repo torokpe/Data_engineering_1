@@ -9,13 +9,13 @@
 **Date of submission:** 03.11.2024
 
 ## Table of Contents
-1. [EXECUTIVE SUMMARY](#executive_summary)
-2. [DATASET DESCRIPTION](#dataset_description)
-3. [OPERATIONAL LAYER](#operational_layer)
-4. [ANALYTICAL PLAN](#analytical_play)
-5. [ANALYTICAL LAYER](#analytical_layer)
-6. [ETL PIPELINE](#etl_pipeline)
-7. [DATA MARTS](#data_marts)
+1. [EXECUTIVE SUMMARY](#executive-summary)
+2. [DATASET DESCRIPTION](#dataset-description)
+4. [OPERATIONAL LAYER](#operational-layer)
+5. [ANALYTICAL PLAN](#analytical-plan)
+6. [ANALYTICAL LAYER](#analytical-layer)
+7. [ETL PIPELINE](#etl-pipeline)
+8. [DATA MARTS](#data-marts)
 
 ## 1. EXECUTIVE SUMMARY
 
@@ -56,19 +56,7 @@ The dataset I used consists of six tables, each representing a critical componen
 
 ## 2.3 Variable description
 
-driverID:
-A unique identifier for each driver in the dataset. This field is used to establish relationships with other tables, such as the Results and Constructors tables.
-
-forename:
-The first name of the driver. This field, along with surname, is used for identifying the driver in the dataset.
-
-surname:
-The last name (or family name) of the driver. Combined with forename, it provides the driver’s full name.
-date_of_birth:
-The birth date of the driver. This field is useful for calculating the driver’s age at the time of each race or event.
-
-	•	driver_country:
-The nationality of the driver, representing the country the driver is from. It may be useful for analyzing performance by country or nationality.
+The variables for each table and their description are grouped in the following matrix:
 
 | Table            | Variables            | Description                                                                 |
 |------------------|----------------------|-----------------------------------------------------------------------------|
@@ -115,6 +103,31 @@ These tables are interconnected through a set of primary and foreign key relatio
 This relational structure enables rich data queries and analysis, allowing me to uncover patterns and insights related to driver performance, constructor success, and race outcomes. By analyzing this data, I aim to highlight the importance of data-driven decisions in the fast-paced and highly competitive world of Formula 1.
 
 This description ties in your interest in F1 with a detailed explanation of the dataset structure and its relationships. Let me know if you’d like to tweak anything!
+
+# Example headings
+
+## Sample Section
+
+## This'll  be a _Helpful_ Section About the Greek Letter Θ!
+A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
+
+## This heading is not unique in the file
+
+TEXT 1
+
+## This heading is not unique in the file
+
+TEXT 2
+
+# Links to the example headings above
+
+Link to the sample section: [Link Text](#sample-section).
+
+Link to the helpful section: [Link Text](#thisll--be-a-helpful-section-about-the-greek-letter-Θ).
+
+Link to the first non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file).
+
+Link to the second non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file-1).
 
 ### 2.3 Variables
 
