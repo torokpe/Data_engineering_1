@@ -11,15 +11,16 @@
 ## Table of Contents
 1. [EXECUTIVE SUMMARY](#executive-summary)
 2. [DATASET DESCRIPTION](#dataset-description)
-4. [OPERATIONAL LAYER](#operational-layer)
-5. [ANALYTICAL PLAN](#analytical-plan)
-6. [ANALYTICAL LAYER](#analytical-layer)
-7. [ETL PIPELINE](#etl-pipeline)
-8. [DATA MARTS](#data-marts)
+3. [OPERATIONAL LAYER](#operational-layer)
+4. [ANALYTICAL PLAN](#analytical-plan)
+5. [ANALYTICAL LAYER](#analytical-layer)
+6. [ETL PIPELINE](#etl-pipeline)
+7. [DATA MARTS](#data-marts)
+8. [OPPORTUNITIES FOR FUTURE DEVELOPMENT](#opportunities-for-future-development)
 
 ## 1. EXECUTIVE SUMMARY
 
-For my Data Engineering I. first term project, I utilized a Formula 1 relational dataset sourced from [Kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) to analyze race performance, drivers, constructors, and circuit data. The dataset, containing historical F1 data, allowed for the creation of a comprehensive data pipeline and the exploration of key insights into Formula 1 racing.
+For my Data Engineering I. first term project, I utilized a Formula 1 (also  relational dataset sourced from [Kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) to analyze race performance, drivers, constructors, and circuit data. The dataset, containing historical F1 data, allowed for the creation of a comprehensive data pipeline and the exploration of key insights into Formula 1 racing.
 
 The project began by designing and implementing a relational database schema in MySQL, where I created normalized tables to store information about races, drivers, constructors, and results. Relationships between entities were established through primary and foreign keys to ensure data integrity.
 
@@ -113,9 +114,18 @@ This description ties in your interest in F1 with a detailed explanation of the 
 
 In developing the research focus for my project, I structured my analysis around three key pillars: 
 
-  - **Driver Performance:** focuses on the skills and consistency of individual drivers, exploring how various factors like age, experience, and starting position influence their results.
-  - **Constructor Performance:** delves into how teams, through strategic decisions and resource allocation, impact their performance in races and over seasons.
-  - **Mechanical/Engineering Dimension:** investigates how technology, car components, and upgrades contribute to race outcomes and team success.
+### 4.1 Driver Performance 
+Focuses on the skills and consistency of individual drivers, exploring how various factors like age, experience, and starting position influence their results:
+1. At which stage of the race do riders most often make a mistake that can lead to a disqualification or accident?
+2. 
+
+
+### 4.2 Constructor Performance
+Analysing how teams, through strategic decisions and resource allocation, impact their performance in races and over seasons.
+
+### 4.3 Mechanical/Engineering Dimension
+Investigates how technology, car components, and upgrades contribute to race outcomes and team success:
+1.	Is there a correlation between specific technical faults (e.g., gearbox failures, engine issues) and particular race tracks? In other words, are certain faults more likely to occur on specific tracks compared to others, possibly due to track characteristics such as layout, surface, or elevation changes?
 
 These pillars represent the core aspects of Formula 1, where the synergy between human skill, team strategy, and mechanical reliability determines success on the track. By basing my analysis on these three elements, I aim to provide a comprehensive understanding of how individual and team efforts combine with engineering advancements to shape race outcomes.
 ## 5. ANALYTICAL LAYER
