@@ -1,10 +1,10 @@
-# Data Engineering I. - Term project I.
+# Data Engineering I. - Term Project I.
 
 **Author:** Péter Bence Török
 
 **Email:** Toeroek_Peter-Bence@student.ceu.edu
 
-**Program:** Central European University - Business Analytics Msc 2024/25
+**Program:** Central European University (CEU) - Business Analytics Msc 2024/25
 
 **Date of submission:** 03.11.2024
 
@@ -16,7 +16,6 @@
 5. [ANALYTICAL LAYER](#analytical_layer)
 6. [ETL PIPELINE](#etl_pipeline)
 7. [DATA MARTS](#data_marts)
-
 
 ## 1. EXECUTIVE SUMMARY
 
@@ -43,7 +42,7 @@ This project leverages a Formula 1 dataset sourced from [Kaggle](https://www.kag
 
 The dataset I used consists of six tables, each representing a critical component of the Formula 1 ecosystem:
 
-1.	**drivers**	– Contains driver information such as name, date of birth, nationality, and driver ID.
+1.	**drivers** – Contains driver information such as name, date of birth, nationality, and driver ID.
   	
 2.	**constructors** – Includes constructor details like name, nationality, and constructor ID.
 
