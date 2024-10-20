@@ -56,7 +56,6 @@ The dataset I used consists of six tables, each representing a critical componen
 6.	**status_codes** – Contains the mapping of the specific status codes with the regarding status name (e.g., finished)
 
 ## 2.3 Variable description
-
 The variables for each table and their description are grouped in the following matrix:
 
 | Table            | Variables            | Description                                                                 |
@@ -126,20 +125,24 @@ Focuses on the skills and consistency of individual drivers, exploring how vario
 ### 4.2 Constructor Performance
 Analysing how teams, through strategic decisions and resource allocation, impact their performance in races and over seasons:
 
-6. Do the constructors prefer to employ domestic drivers?
-7. On average, how many years does it take for a team to win constructors' trophy after their debut in Formula 1?
-8. 
+6. Do constructors show a preference for hiring drivers from their home country, and if so, how has this trend evolved over time?
+7. On average, how many years does it take for a team to win its first Constructors’ Championship after debuting in Formula 1?
+8. Which long-standing constructors (with more than 100 races) have shown the most consistency in terms of points gained over time, as measured by the lowest standard deviation in performance?
+9. On average, how many race wins per season are required for a team to secure the Constructors’ Championship?
+10. Which constructors have been the most dominant in the post-2010 era, measured by the number of 1-2 finishes they have achieved?
 
 ### 4.3 Mechanical/Engineering Dimension
 Investigates how technology, car components, and upgrades contribute to race outcomes and team success:
-11.	Is there a correlation between specific technical faults (e.g., gearbox failures, engine issues) and particular race tracks? In other words, are certain faults more likely to occur on specific tracks compared to others, possibly due to track characteristics such as layout, surface, or elevation changes?
-12.	What are the most frequently occuring mechanicical failures of the specific constructors?
-13. Which constructors focus more on maximum speed in the straights during development (based on maximum speed data)?
-14. Do constructors rather design their cars for high grid (can win races where there are more turns) or for higher maximum speed in the straights (higher maximum speed in their fastest lap)?
-15. 
 
+11. Is there a correlation between specific technical failures (e.g., gearbox, engine issues) and particular race tracks? Are certain faults more common on specific circuits due to track characteristics such as layout, surface, or elevation changes?
+12. What are the most frequent mechanical failures for each constructor?
+13. Which constructors prioritize maximum straight-line speed during car development (based on maximum speed data)?
+14. Do constructors design their cars more for high cornering performance (to win on tracks with more turns) or for higher top speeds on straights (based on maximum speed data from fastest laps)?
+15. Which driver experienced the most mechanical failures in proportion to the number of races they participated in?
 
 These pillars represent the core aspects of Formula 1, where the synergy between human skill, team strategy, and mechanical reliability determines success on the track. By basing my analysis on these three elements, I aim to provide a comprehensive understanding of how individual and team efforts combine with engineering advancements to shape race outcomes.
+
+
 ## 5. ANALYTICAL LAYER
 
 ## 6. ETL PIPELINE
