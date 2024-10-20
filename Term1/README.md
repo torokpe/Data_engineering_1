@@ -104,32 +104,8 @@ This relational structure enables rich data queries and analysis, allowing me to
 
 This description ties in your interest in F1 with a detailed explanation of the dataset structure and its relationships. Let me know if you’d like to tweak anything!
 
-# Example headings
-
-## Sample Section
-
-## This'll  be a _Helpful_ Section About the Greek Letter Θ!
-A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
-
-## This heading is not unique in the file
-
-TEXT 1
-
-## This heading is not unique in the file
-
-TEXT 2
-
-# Links to the example headings above
-
-Link to the sample section: [Link Text](#sample-section).
-
-Link to the helpful section: [Link Text](#thisll--be-a-helpful-section-about-the-greek-letter-Θ).
-
-Link to the first non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file).
-
-Link to the second non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file-1).
-
-### 2.3 Variables
+> [!Note]
+> The original dataset contained 14 tables, including data on qualifications, championships, and other aspects of Formula 1. However, for the purposes of this research, the focus has been limited to races only. As a result, the additional tables related to qualifying sessions, championship standings, and other data were not utilized in the analysis.
 
 ## 3. OPERATIONAL LAYER
 
