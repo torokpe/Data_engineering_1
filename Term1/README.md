@@ -116,16 +116,28 @@ In developing the research focus for my project, I structured my analysis around
 
 ### 4.1 Driver Performance 
 Focuses on the skills and consistency of individual drivers, exploring how various factors like age, experience, and starting position influence their results:
-1. At which stage of the race do riders most often make a mistake that can lead to a disqualification or accident?
-2. 
 
+1. At which stage of a race are drivers most prone to making mistakes that lead to disqualifications or accidents?
+2. How has the frequency of crashes or driver retirements changed over time? Have races become safer as the sport has evolved?
+3. Which country has produced the most Formula 1 drivers, and which has produced the best performers?
+4. What is the probability of the pole position driver winning the race based on historical data, and how does this vary across different circuits?
+5. Is there a correlation between a driver's age and their performance? At what age do drivers typically reach their peak?
 
 ### 4.2 Constructor Performance
-Analysing how teams, through strategic decisions and resource allocation, impact their performance in races and over seasons.
+Analysing how teams, through strategic decisions and resource allocation, impact their performance in races and over seasons:
+
+6. Do the constructors prefer to employ domestic drivers?
+7. On average, how many years does it take for a team to win constructors' trophy after their debut in Formula 1?
+8. 
 
 ### 4.3 Mechanical/Engineering Dimension
 Investigates how technology, car components, and upgrades contribute to race outcomes and team success:
-1.	Is there a correlation between specific technical faults (e.g., gearbox failures, engine issues) and particular race tracks? In other words, are certain faults more likely to occur on specific tracks compared to others, possibly due to track characteristics such as layout, surface, or elevation changes?
+11.	Is there a correlation between specific technical faults (e.g., gearbox failures, engine issues) and particular race tracks? In other words, are certain faults more likely to occur on specific tracks compared to others, possibly due to track characteristics such as layout, surface, or elevation changes?
+12.	What are the most frequently occuring mechanicical failures of the specific constructors?
+13. Which constructors focus more on maximum speed in the straights during development (based on maximum speed data)?
+14. Do constructors rather design their cars for high grid (can win races where there are more turns) or for higher maximum speed in the straights (higher maximum speed in their fastest lap)?
+15. 
+
 
 These pillars represent the core aspects of Formula 1, where the synergy between human skill, team strategy, and mechanical reliability determines success on the track. By basing my analysis on these three elements, I aim to provide a comprehensive understanding of how individual and team efforts combine with engineering advancements to shape race outcomes.
 ## 5. ANALYTICAL LAYER
