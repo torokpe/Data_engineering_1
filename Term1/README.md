@@ -109,7 +109,7 @@ This description ties in your interest in F1 with a detailed explanation of the 
 
 ## 3. OPERATIONAL LAYER
 
-![OLTP diagram](/Term1/resources/OLTP diagram.png)
+![OLTP diagram](/Term1/Resources/OLTP diagram.png)
 
 ## 4. ANALYTICAL PLAN
 
