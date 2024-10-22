@@ -140,7 +140,7 @@ Analysing how teams, through strategic decisions and resource allocation, impact
 10. Which constructors have been the most dominant in the post-2010 era, measured by the number of 1-2 finishes they have achieved?
 
 ### 4.3 Mechanical/Engineering Dimension
-Investigates how technology, car components, and upgrades contribute to race outcomes and team success:
+Investigates how technology, car design, and other engineering related aspects contribute to race outcomes and team success:
 
 11. Is there a correlation between specific technical failures (e.g., gearbox, engine issues) and particular race tracks? Are certain faults more common on specific circuits due to track characteristics such as layout, surface, or elevation changes?
 12. What are the most frequent mechanical failures for each constructor?
