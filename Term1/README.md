@@ -113,7 +113,13 @@ This description ties in your interest in F1 with a detailed explanation of the 
 
 ## 4. ANALYTICAL PLAN
 
-In developing the research focus for my project, I structured my analysis around three key pillars: 
+Based on available variables and data quality, nn developing the research focus for my project, I structured my analysis around three key pillars:
+
+- Driver Performance
+
+- Constructor Performance
+
+- Mechanical/Engineering Dimension
 
 ### 4.1 Driver Performance 
 Focuses on the skills and consistency of individual drivers, exploring how various factors like age, experience, and starting position influence their results:
@@ -141,9 +147,6 @@ Investigates how technology, car components, and upgrades contribute to race out
 13. Which constructors prioritize maximum straight-line speed during car development (based on maximum speed data)?
 14. Do constructors design their cars more for high cornering performance (to win on tracks with more turns) or for higher top speeds on straights (based on maximum speed data from fastest laps)?
 15. Which driver experienced the most mechanical failures in proportion to the number of races they participated in?
-
-These pillars represent the core aspects of Formula 1, where the synergy between human skill, team strategy, and mechanical reliability determines success on the track. By basing my analysis on these three elements, I aim to provide a comprehensive understanding of how individual and team efforts combine with engineering advancements to shape race outcomes.
-
 
 ## 5. ANALYTICAL LAYER
 
