@@ -60,12 +60,12 @@ The variables for each table and their description are grouped in the following 
 
 | Table            | Variables            | Description                                                                 |
 |------------------|----------------------|-----------------------------------------------------------------------------|
-| **drivers**       | driver_id            | Unique identifier for each driver (primary key).                            |
+| **drivers**      | driver_id            | Unique identifier for each driver (primary key).                            |
 |                  | first_name           | The first name of the driver.                                               |
 |                  | last_name            | The last name of the driver.                                                |
 |                  | date_of_birth        | The driver's birthdate.                                                     |
 |                  | driver_country       | The nationality of the driver.                                              |
-| **constructors**  | constructor_id       | Unique identifier for each constructor (primary key).                       |
+| **constructors** | constructor_id       | Unique identifier for each constructor (primary key).                       |
 |                  | constructor_name     | The name of the constructor (team).                                         |
 |                  | constructor_country  | The country where the constructor is based.                                 |
 | **races**        | race_id              | Unique identifier for each race (primary key).                              |
@@ -109,7 +109,44 @@ This description ties in your interest in F1 with a detailed explanation of the 
 
 ## 3. OPERATIONAL LAYER (OLTP)
 
+The operational layer of this project is designed to establish the foundational data structure for storing and managing Formula 1 race data. This part of the project sets up six essential tables, which will be populated with data imported from external CSV files. These tables include race_results, drivers, constructors, circuits, races, and status_codes. Each table is carefully constructed to align with the structure of the incoming data and ensure data consistency.
+
+Table Setup
+
+The operational layer begins by creating the following six tables:
+
+	1.	race_results: Stores detailed results for each race, including race ID, driver ID, constructor ID, grid position, final position, points, and other performance metrics.
+	2.	drivers: Contains driver information such as driver ID, forename, surname, date of birth, and nationality.
+	3.	constructors: Holds constructor details, including constructor ID, name, and country of origin.
+	4.	circuits: Stores information about racing circuits, including circuit ID, name, location, country, number of turns, and length.
+	5.	races: Provides metadata for each race, including race ID, season, round number, circuit ID, Grand Prix name, and date.
+	6.	status_codes: Includes status identifiers and descriptions, which indicate race outcomes (e.g., finished, retired).
+
+Data Import Process
+
+Once the tables are set up, data is imported using the LOAD DATA INFILE command. This command loads data from CSV files directly into the respective tables, streamlining the process of populating the operational layer with raw data. The LOAD DATA INFILE statements specify the file paths, delimiters, and any necessary configuration to match the structure of the source data.
+
+This approach ensures that the operational layer is prepared to hold comprehensive, organized data that forms the basis for further transformations and analysis in subsequent parts of the data pipeline. The structured setup of these six tables, followed by data importation, provides a reliable foundation for the ETL processes and analytical insights that follow.
+
 ![OLTP diagram](/Term1/Resources/OLTP_diagram.png)
+
+In the operational layer of the project, relationships between the tables are established to ensure data integrity and enforce referential constraints. This step involves adding foreign keys that link the primary keys of related tables, thereby creating a structured and interconnected data schema.
+
+Establishing Relationships
+
+The relationships between the tables are essential for maintaining data consistency and enabling efficient querying. Here’s how the relationships are set up:
+
+	1.	race_results Table:
+	•	The raceID column is linked to the raceID in the races table through a foreign key. This ensures that each entry in race_results corresponds to an existing race.
+	•	The driverID column is linked to the driverID in the drivers table, associating each race result with a specific driver.
+	•	The constructorID column is linked to the constructorID in the constructors table, connecting race results with their corresponding constructors.
+	•	The statusID column is linked to the statusID in the status_codes table, ensuring that each result has a valid status.
+	2.	races Table:
+	•	The circuitID column is linked to the circuitID in the circuits table, establishing the relationship between each race and the circuit it takes place on.
+
+Adding Foreign Keys
+
+Foreign key constraints are added to enforce these relationships and ensure that data inserted into the tables adheres to the established schema. This prevents the creation of orphaned records and maintains data consistency across the database.
 
 ## 4. ANALYTICAL PLAN
 
@@ -168,10 +205,12 @@ The ETL pipeline created for this project with a stored procedure efficiently ap
 2. Transformation: The pipeline goes beyond simple data merging by applying various transformations to enrich the data. This includes calculating new columns such as Age, derived from the difference between the driver’s date of birth and the race date, adding a deeper level of analysis. The transformation step also standardizes and formats data to ensure consistency and accuracy across the dataset.
 3. Loading: After the data has been extracted and transformed, it is loaded into the analytical_layer table, which serves as the comprehensive repository for all integrated and processed data. This table is structured to support efficient querying and reporting, eliminating the need for repeated data processing during analysis.
 
-By incorporating all three dimensions of ETL, the stored procedure ensures that the data pipeline is robust, automated, and capable of delivering consistent, high-quality data to facilitate insights and business decision-making. This approach enhances the overall data readiness and enables streamlined data analysis across the organization.
+By incorporating all three dimensions of ETL, the stored procedure ensures that the data pipeline is robust, automated, and capable of delivering consistent, high-quality data to facilitate insights and business decision-making.
 
 ## 7. DATA MARTS
 
+> [!Note]
+> As for the process of loading data into the previously created tables, please note that you have to adjust the path to the correct file location where the source tables are located.
 
 
 
