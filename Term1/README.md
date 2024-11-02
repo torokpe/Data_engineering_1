@@ -125,11 +125,12 @@ The operational layer begins by creating the following six tables:
 
 6. status_codes: Includes status identifiers and descriptions, which indicate race outcomes (e.g., finished, retired).
 
-Data Import Process
-
 Once the tables are set up, data is imported using the LOAD DATA INFILE command. This command loads data from CSV files directly into the respective tables, streamlining the process of populating the operational layer with raw data. The LOAD DATA INFILE statements specify the file paths, delimiters, and any necessary configuration to match the structure of the source data.
 
 This approach ensures that the operational layer is prepared to hold comprehensive, organized data that forms the basis for further transformations and analysis in subsequent parts of the data pipeline. The structured setup of these six tables, followed by data importation, provides a reliable foundation for the ETL processes and analytical insights that follow.
+
+> [!Note]
+> Regarding the process of loading data into the previously created tables, please ensure that you adjust the file path to the correct location where the source data files are stored.
 
 ![OLTP diagram](/Term1/Resources/OLTP_diagram.png)
 
@@ -215,8 +216,6 @@ By incorporating all three dimensions of ETL, the stored procedure ensures that 
 
 ## 7. DATA MARTS
 
-> [!Note]
-> As for the process of loading data into the previously created tables, please note that you have to adjust the path to the correct file location where the source tables are located.
 
 
 
