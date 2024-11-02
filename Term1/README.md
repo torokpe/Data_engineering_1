@@ -115,12 +115,17 @@ Table Setup
 
 The operational layer begins by creating the following six tables:
 
-	1.	race_results: Stores detailed results for each race, including race ID, driver ID, constructor ID, grid position, final position, points, and other performance metrics.
-	2.	drivers: Contains driver information such as driver ID, forename, surname, date of birth, and nationality.
-	3.	constructors: Holds constructor details, including constructor ID, name, and country of origin.
-	4.	circuits: Stores information about racing circuits, including circuit ID, name, location, country, number of turns, and length.
-	5.	races: Provides metadata for each race, including race ID, season, round number, circuit ID, Grand Prix name, and date.
-	6.	status_codes: Includes status identifiers and descriptions, which indicate race outcomes (e.g., finished, retired).
+1. race_results: Stores detailed results for each race, including race ID, driver ID, constructor ID, grid position, final position, points, and other performance metrics.
+
+2. drivers: Contains driver information such as driver ID, forename, surname, date of birth, and nationality.
+
+3. constructors: Holds constructor details, including constructor ID, name, and country of origin.
+
+4. circuits: Stores information about racing circuits, including circuit ID, name, location, country, number of turns, and length.
+
+5. races: Provides metadata for each race, including race ID, season, round number, circuit ID, Grand Prix name, and date.
+
+6. status_codes: Includes status identifiers and descriptions, which indicate race outcomes (e.g., finished, retired).
 
 Data Import Process
 
