@@ -11,7 +11,7 @@
 ## Table of Contents
 1. [EXECUTIVE SUMMARY](#executive-summary)
 2. [DATASET DESCRIPTION](#dataset-description)
-3. [OPERATIONAL LAYER](#operational-layer)
+3. [OPERATIONAL LAYER (OLTP)](#operational-layer)
 4. [ANALYTICAL PLAN](#analytical-plan)
 5. [ANALYTICAL LAYER](#analytical-layer)
 6. [ETL PIPELINE](#etl-pipeline)
@@ -107,7 +107,7 @@ This description ties in your interest in F1 with a detailed explanation of the 
 > [!Note]
 > The original dataset contained 14 tables, including data on qualifications, championships, and other aspects of Formula 1. However, for the purposes of this research, the focus has been limited to races only. As a result, the additional tables related to qualifying sessions, championship standings, and other data were not utilized in the analysis.
 
-## 3. OPERATIONAL LAYER
+## 3. OPERATIONAL LAYER (OLTP)
 
 ![OLTP diagram](/Term1/Resources/OLTP_diagram.png)
 
@@ -150,7 +150,25 @@ Investigates how technology, car design, and other engineering related aspects c
 
 ## 5. ANALYTICAL LAYER
 
+As for the data warehouse, I created a comprehensive table named analytical_layer that consolidates all the necessary columns and required information for analysis. This table integrates data from various operational tables, including race results, drivers, constructors, circuits, and status codes, to provide a complete view of each race’s outcome and context. By including enriched fields such as driver age at the time of the race and detailed race information (e.g., circuit name and constructor details), the analytical_layer facilitates seamless, efficient querying and serves as a robust foundation for further analysis and reporting.
+
+The creation of the analytical_layer table was accomplished through a stored procedure that goes beyond simply joining data from different source tables. This procedure also incorporates data transformations to derive new columns that add valuable context to the dataset. For example, it calculates the Age column by computing the difference between a driver’s date of birth and the race date, providing insight into the age of the driver at each race. These transformations ensure that the table is enriched with detailed and meaningful data, supporting more efficient and insightful analysis without the need for additional processing at query time.
+
 ## 6. ETL PIPELINE
+
+The ETL pipeline for this project was created using a stored procedure that automates the integration and transformation of data from the operational layer into the analytical_layer table. This stored procedure handles data extraction from multiple source tables, including race_results, drivers, constructors, circuits, and status_codes, ensuring that all relevant data points are combined seamlessly.
+
+Beyond simply joining these tables, the procedure applies necessary transformations to enrich the dataset. For instance, it calculates derived columns such as Age, which is computed by finding the difference between a driver’s date of birth and the race date. This transformation adds valuable context, enabling more granular analysis and supporting advanced reporting needs.
+
+The ETL process ensures that the analytical_layer table is always populated with up-to-date, integrated, and transformed data, facilitating efficient data queries and eliminating the need for complex on-the-fly data manipulations. The pipeline not only standardizes the data preparation but also enhances consistency and reliability, supporting data-driven insights and business decision-making with a streamlined and automated approach.
+
+The ETL pipeline created for this project with a stored procedure efficiently applies all three dimensions of the ETL process: Extraction, Transformation, and Loading.
+
+	1.	Extraction: The stored procedure begins by pulling data from multiple source tables within the operational layer, such as race_results, drivers, constructors, circuits, and status_codes. This ensures that all relevant raw data is retrieved and consolidated for further processing.
+	2.	Transformation: The pipeline goes beyond simple data merging by applying various transformations to enrich the data. This includes calculating new columns such as Age, derived from the difference between the driver’s date of birth and the race date, adding a deeper level of analysis. The transformation step also standardizes and formats data to ensure consistency and accuracy across the dataset.
+	3.	Loading: After the data has been extracted and transformed, it is loaded into the analytical_layer table, which serves as the comprehensive repository for all integrated and processed data. This table is structured to support efficient querying and reporting, eliminating the need for repeated data processing during analysis.
+
+By incorporating all three dimensions of ETL, the stored procedure ensures that the data pipeline is robust, automated, and capable of delivering consistent, high-quality data to facilitate insights and business decision-making. This approach enhances the overall data readiness and enables streamlined data analysis across the organization.
 
 ## 7. DATA MARTS
 
