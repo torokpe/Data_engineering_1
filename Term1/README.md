@@ -136,13 +136,14 @@ Establishing Relationships
 
 The relationships between the tables are essential for maintaining data consistency and enabling efficient querying. Here’s how the relationships are set up:
 
-	1.	race_results Table:
-	•	The raceID column is linked to the raceID in the races table through a foreign key. This ensures that each entry in race_results corresponds to an existing race.
-	•	The driverID column is linked to the driverID in the drivers table, associating each race result with a specific driver.
-	•	The constructorID column is linked to the constructorID in the constructors table, connecting race results with their corresponding constructors.
-	•	The statusID column is linked to the statusID in the status_codes table, ensuring that each result has a valid status.
-	2.	races Table:
-	•	The circuitID column is linked to the circuitID in the circuits table, establishing the relationship between each race and the circuit it takes place on.
+race_results Table:
+• The raceID column is linked to the raceID in the races table through a foreign key. This ensures that each entry in race_results corresponds to an existing race.
+• The driverID column is linked to the driverID in the drivers table, associating each race result with a specific driver.
+• The constructorID column is linked to the constructorID in the constructors table, connecting race results with their corresponding constructors.
+• The statusID column is linked to the statusID in the status_codes table, ensuring that each result has a valid status.
+
+races Table:
+• The circuitID column is linked to the circuitID in the circuits table, establishing the relationship between each race and the circuit it takes place on.
 
 Adding Foreign Keys
 
