@@ -111,8 +111,6 @@ This description ties in your interest in F1 with a detailed explanation of the 
 
 The operational layer of this project is designed to establish the foundational data structure for storing and managing Formula 1 race data. This part of the project sets up six essential tables, which will be populated with data imported from external CSV files. These tables include race_results, drivers, constructors, circuits, races, and status_codes. Each table is carefully constructed to align with the structure of the incoming data and ensure data consistency.
 
-Table Setup
-
 The operational layer begins by creating the following six tables:
 
 1. race_results: Stores detailed results for each race, including race ID, driver ID, constructor ID, grid position, final position, points, and other performance metrics.
@@ -208,7 +206,9 @@ The ETL process ensures that the analytical_layer table is always populated with
 The ETL pipeline created for this project with a stored procedure efficiently applies all three dimensions of the ETL process: Extraction, Transformation, and Loading.
 
 1. Extraction: The stored procedure begins by pulling data from multiple source tables within the operational layer, such as race_results, drivers, constructors, circuits, and status_codes. This ensures that all relevant raw data is retrieved and consolidated for further processing.
+
 2. Transformation: The pipeline goes beyond simple data merging by applying various transformations to enrich the data. This includes calculating new columns such as Age, derived from the difference between the driver’s date of birth and the race date, adding a deeper level of analysis. The transformation step also standardizes and formats data to ensure consistency and accuracy across the dataset.
+
 3. Loading: After the data has been extracted and transformed, it is loaded into the analytical_layer table, which serves as the comprehensive repository for all integrated and processed data. This table is structured to support efficient querying and reporting, eliminating the need for repeated data processing during analysis.
 
 By incorporating all three dimensions of ETL, the stored procedure ensures that the data pipeline is robust, automated, and capable of delivering consistent, high-quality data to facilitate insights and business decision-making.
