@@ -194,6 +194,8 @@ Investigates how technology, car design, and other engineering related aspects c
 
 As for the data warehouse, I created a comprehensive table named analytical_layer that consolidates all the necessary columns and required information for analysis. This table integrates data from various operational tables, including race results, drivers, constructors, circuits, and status codes, to provide a complete view of each race’s outcome and context. By including enriched fields such as driver age at the time of the race and detailed race information (e.g., circuit name and constructor details), the analytical_layer facilitates seamless, efficient querying and serves as a robust foundation for further analysis and reporting.
 
+![OLTP diagram](/Term1/Resources/Datawarehouse_dimensions.png)
+
 The creation of the analytical_layer table was accomplished through a stored procedure that goes beyond simply joining data from different source tables. This procedure also incorporates data transformations to derive new columns that add valuable context to the dataset. For example, it calculates the Age column by computing the difference between a driver’s date of birth and the race date, providing insight into the age of the driver at each race. These transformations ensure that the table is enriched with detailed and meaningful data, supporting more efficient and insightful analysis without the need for additional processing at query time.
 
 ## 6. ETL PIPELINE
