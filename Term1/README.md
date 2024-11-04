@@ -194,6 +194,8 @@ Investigates how technology, car design, and other engineering related aspects c
 14. Do constructors design their cars more for high cornering performance (to win on tracks with more turns) or for higher top speeds on straights (based on maximum speed data from fastest laps)?
 15. Which driver experienced the most mechanical failures in proportion to the number of races they participated in?
 
+The analytical_layer provides a comprehensive dataset that includes all necessary variables and records, enabling in-depth analyses across various aspects of Formula 1 performance. This consolidated table integrates data from multiple sources, such as race results, driver details, constructors, and circuit information, to ensure that all essential metrics are readily available for analysis. With the support of a well-designed ETL pipeline, the analytical_layer remains accurate and up-to-date. The ETL pipeline automates data extraction, transformation, and loading, ensuring that new data is seamlessly incorporated and any changes in the source tables are reflected promptly. This setup guarantees that analysts have reliable, current data for conducting meaningful and detailed analyses, facilitating insights that drive strategic decisions.
+
 > [!Note]
 > The listed analytical questions are part of a theoretical research that will not be answered in this assignments. Although the materialized views and the simple views will answer 5 of these questions partiallly, further investigation and more in-depth analyses would be needed with more sophisticated tools (e.g., with python, R etc.).
 
