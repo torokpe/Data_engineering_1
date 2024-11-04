@@ -245,4 +245,12 @@ country_driver_statistics: This view shows which countries have produced the mos
 
 These data marts are aligned with the analytical plan’s questions, providing targeted answers and supporting deeper research into performance patterns, reliability issues, and regional trends in Formula 1 racing. This structured approach ensures that the insights gained are both relevant and comprehensive, facilitating well-informed research and strategic decision-making.
 
+## 8. Possible development opportunities
 
+This assignment was developed in alignment with the requirements of this course, focusing on building a robust data infrastructure and data marts to support potential analyses. While it establishes a strong foundation by creating an analytical_layer and five data marts (three materialized views and two simple views), it does not delve into in-depth analysis. There are numerous opportunities for further development in the analytical component to comprehensively answer the research questions outlined in the analytical plan.
+
+To fully leverage the data and gain deeper insights, the analytical part could be expanded to include more sophisticated analyses. This would involve using advanced statistical and data visualization tools such as Python or R. These programming environments offer powerful libraries for data manipulation, statistical analysis, machine learning, and visualization, enabling a more nuanced exploration of performance trends, reliability issues, and regional patterns in Formula 1 racing.
+
+Enhancing the analytical component would allow for thorough examination of correlations, predictive modeling, and hypothesis testing, providing more conclusive and actionable insights. For instance, Python’s pandas and scikit-learn libraries or R’s tidyverse and caret packages could be utilized to perform regression analysis, clustering, and machine learning algorithms, effectively answering the research questions and supporting data-driven decision-making.
+
+In summary, while this assignment meets the structural requirements of the course and establishes the groundwork for research, the next phase of development would be to incorporate advanced analytical techniques using Python or R to fully realize the potential of the data and answer each research question with greater depth and precision.
