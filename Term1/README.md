@@ -227,6 +227,14 @@ By incorporating all three dimensions of ETL, the stored procedure ensures that 
 
 ## 7. DATA MARTS
 
+My assignment includes the development of 5 data marts, composed of 3 materialized views and 2 simple views, to support comprehensive analytics and provide valuable insights for potential research. These data marts are designed to align with the questions outlined in the analytical plan, ensuring that the analyses are targeted and relevant. Each data mart serves a specific purpose, facilitating easy access to critical metrics and trends for deeper exploration. Below is a description of these 5 data marts:
 
+1.	Materialized View: mv_constructors_technical_failures – This data mart identifies the most frequently occurring technical failures for each constructor, along with the percentage of each issue relative to their total technical failures. It helps highlight reliability concerns and potential areas for engineering improvements.
+2.	Materialized View: mv_circuit_technical_failures – This data mart focuses on the most common mechanical issues at different circuits, showing the frequency and proportion of each problem in relation to all technical failures at those circuits. It provides insights into circuit-specific challenges that teams face.
+3.	Materialized View: mv_age_group_avg_points – This view calculates the average points scored by drivers in different age groups. It helps analyze performance trends based on driver age, giving insights into how experience and age might correlate with race outcomes.
+4.	Simple View: pole_position_win_probability – This view displays the probability of a pole position driver (starting from Grid position 1) winning the race, broken down by circuit. It enables analysis of how circuit characteristics affect the likelihood of converting pole positions into race wins.
+5.	Simple View: country_driver_statistics – This view shows which countries have produced the most Formula 1 drivers and which have the best-performing drivers based on total points. It offers a geographical perspective on driver representation and success.
+
+These data marts are aligned with the analytical plan’s questions, providing targeted answers and supporting deeper research into performance patterns, reliability issues, and regional trends in Formula 1 racing. This structured approach ensures that the insights gained are both relevant and comprehensive, facilitating well-informed research and strategic decision-making.
 
 
