@@ -194,6 +194,9 @@ Investigates how technology, car design, and other engineering related aspects c
 14. Do constructors design their cars more for high cornering performance (to win on tracks with more turns) or for higher top speeds on straights (based on maximum speed data from fastest laps)?
 15. Which driver experienced the most mechanical failures in proportion to the number of races they participated in?
 
+> [!Note]
+> The listed analytical questions are part of a theoretical research that will not be answered in this assignments. Although the materialized views and the simple views will answer 5 of these questions partiallly, further investigation and more in-depth analyses would be needed with more sophisticated tools (e.g., with python, R etc.).
+
 ## 5. ANALYTICAL LAYER
 
 As for the data warehouse, I created a comprehensive table named analytical_layer that consolidates all the necessary columns and required information for analysis. This table integrates data from various operational tables, including race results, drivers, constructors, circuits, and status codes, to provide a complete view of each race’s outcome and context. By including enriched fields such as driver age at the time of the race and detailed race information (e.g., circuit name and constructor details), the analytical_layer facilitates seamless, efficient querying and serves as a robust foundation for further analysis and reporting.
