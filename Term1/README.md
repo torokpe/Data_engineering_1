@@ -1,4 +1,4 @@
-# Data Engineering I. - Term Project I. Documentation
+# Term Project I. - Documentation
 
 **Author:** Péter Bence Török
 
