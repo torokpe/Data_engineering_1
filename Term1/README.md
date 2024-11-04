@@ -20,7 +20,7 @@
 
 ## 1. EXECUTIVE SUMMARY
 
-For my Data Engineering I. first term project, I utilized a Formula 1 (also  relational dataset sourced from [Kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) to analyze race performance, drivers, constructors, and circuit data. The dataset, containing historical F1 data, allowed for the creation of a comprehensive data pipeline and the exploration of key insights into Formula 1 racing.
+For my Data Engineering I. first term project, I utilized a Formula 1  relational dataset sourced from [Kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) to analyze race performance, drivers, constructors, and circuit data. The dataset, containing historical F1 data between 1950 and 2024, allowed for the creation of a comprehensive data pipeline and the exploration of key insights into Formula 1 racing.
 
 The project began by designing and implementing a relational database schema in MySQL, where I created normalized tables to store information about races, drivers, constructors, and results. Relationships between entities were established through primary and foreign keys to ensure data integrity.
 
@@ -28,9 +28,7 @@ Next, I performed data transformation and denormalization tasks to build optimiz
 
 Additionally, I developed an ETL pipeline that automates data loading and transformation using SQL event triggers. This pipeline ensures that new data is processed efficiently and made available for reporting. Data marts and views were created to simplify access to important metrics, such as average points per race by driver age group.
 
-Throughout the project, various testing strategies were employed to ensure the accuracy and performance of the database, including unit testing for database operations and performance testing for queries.
-
-In conclusion, this project demonstrates the application of data engineering principles—such as database design, ETL pipelines, and data aggregation—using real-world Formula 1 data. It highlights the power of data engineering in turning raw datasets into meaningful insights that can be utilized for performance analysis in sports.
+In conclusion, this project demonstrates the application of data engineering principles—such as database design, ETL pipelines, and data aggregation—using real-world Formula 1 data. In this way, this exercise is a comprehensive presentation of what we have learned in the first half of the course and I have tried to present it with a topic that is close to me personally.
 
 ## 2. DATASET DESCRICPTION
 
@@ -100,9 +98,7 @@ The variables for each table and their description are grouped in the following 
 
 These tables are interconnected through a set of primary and foreign key relationships. For instance, the Results table connects to the Drivers, Races, and Constructors tables via foreign keys to ensure data consistency across entities. The Races table is also linked to the Circuits table, allowing for a comprehensive view of race locations.
 
-This relational structure enables rich data queries and analysis, allowing me to uncover patterns and insights related to driver performance, constructor success, and race outcomes. By analyzing this data, I aim to highlight the importance of data-driven decisions in the fast-paced and highly competitive world of Formula 1.
-
-This description ties in your interest in F1 with a detailed explanation of the dataset structure and its relationships. Let me know if you’d like to tweak anything!
+This relational structure enables rich data queries and analysis, allowing me to uncover patterns and insights related to driver performance, constructor success, and race outcomes.
 
 > [!Note]
 > The original dataset contained 14 tables, including data on qualifications, championships, and other aspects of Formula 1. However, for the purposes of this research, the focus has been limited to races only. As a result, the additional tables related to qualifying sessions, championship standings, and other data were not utilized in the analysis.
@@ -159,7 +155,7 @@ Foreign key constraints are added to enforce these relationships and ensure that
 
 ## 4. ANALYTICAL PLAN
 
-Based on available variables and data quality, nn developing the research focus for my project, I structured my analysis around three key pillars:
+Based on available variables and data quality, in the process of developing the research focus for my project, I structured my analysis around three key pillars:
 
 - Driver Performance
 
@@ -168,6 +164,7 @@ Based on available variables and data quality, nn developing the research focus 
 - Mechanical/Engineering Dimension
 
 ### 4.1 Driver Performance 
+
 Focuses on the skills and consistency of individual drivers, exploring how various factors like age, experience, and starting position influence their results:
 
 1. At which stage of a race are drivers most prone to making mistakes that lead to disqualifications or accidents?
