@@ -43,38 +43,38 @@ This project leverages a Formula 1 dataset sourced from [Kaggle](https://www.kag
 
 The dataset I used consists of six tables, each representing a critical component of the Formula 1 ecosystem:
 
-1.	**drivers** – Contains driver information such as name, date of birth, nationality, and driver ID.
+1.	**t_drivers** – Contains driver information such as name, date of birth, nationality, and driver ID.
   	
-2.	**constructors** – Includes constructor details like name, nationality, and constructor ID.
+2.	**t_constructors** – Includes constructor details like name, nationality, and constructor ID.
 
-3.	**races** – Holds data about each race, including race name, date, circuit ID, and race ID.
+3.	**t_races** – Holds data about each race, including race name, date, circuit ID, and race ID.
 
-4.	**circuits** – Stores information about the tracks where the races take place, such as location, country, and circuit ID.
+4.	**t_circuits** – Stores information about the tracks where the races take place, such as location, country, and circuit ID.
 
-5.	**race_results** – Contains the outcome of each race for each driver, including position, points, fastest lap data and race result status.
+5.	**t_race_results** – Contains the outcome of each race for each driver, including position, points, fastest lap data and race result status.
 
-6.	**status_codes** – Contains the mapping of the specific status codes with the regarding status name (e.g., finished)
+6.	**t_status_codes** – Contains the mapping of the specific status codes with the regarding status name (e.g., finished)
 
 ## 2.3 Variable description
 The variables for each table and their description are grouped in the following matrix:
 
 | Table            | Variables            | Description                                                                 |
 |------------------|----------------------|-----------------------------------------------------------------------------|
-| **drivers**      | driver_id            | Unique identifier for each driver (primary key).                            |
+| **t_drivers**      | driver_id            | Unique identifier for each driver (primary key).                            |
 |                  | first_name           | The first name of the driver.                                               |
 |                  | last_name            | The last name of the driver.                                                |
 |                  | date_of_birth        | The driver's birthdate.                                                     |
 |                  | driver_country       | The nationality of the driver.                                              |
-| **constructors** | constructor_id       | Unique identifier for each constructor (primary key).                       |
+| **t_constructors** | constructor_id       | Unique identifier for each constructor (primary key).                       |
 |                  | constructor_name     | The name of the constructor (team).                                         |
 |                  | constructor_country  | The country where the constructor is based.                                 |
-| **races**        | race_id              | Unique identifier for each race (primary key).                              |
+| **t_races**        | race_id              | Unique identifier for each race (primary key).                              |
 |                  | season               | The year of the race season.                                                |
 |                  | season_round         | The round number within the season.                                         |
 |                  | circuit_id           | Foreign key linking to the circuit where the race occurred.                 |
 |                  | gp_name              | The official name of the Grand Prix.                                        |
 |                  | gp_date              | The date when the race took place.                                          |
-| **race_results** | result_id            | Unique identifier for each race result (primary key).                       |
+| **t_race_results** | result_id            | Unique identifier for each race result (primary key).                       |
 |                  | race_id              | Foreign key linking to the race in which the result occurred.               |
 |                  | driver_id            | Foreign key linking to the driver who competed.                             |
 |                  | constructor_id       | Foreign key linking to the constructor (team) of the driver.                |
@@ -87,13 +87,13 @@ The variables for each table and their description are grouped in the following 
 |                  | fastest_lap_time     | The time of the driver's fastest lap.                                       |
 |                  | fastest_lap_speed    | The speed achieved during the fastest lap.                                  |
 |                  | status_id            | Foreign key linking to the driver's race status (e.g., finished, retired).  |
-| **circuits**     | circuit_id           | Unique identifier for each circuit.                                         |
+| **t_circuits**     | circuit_id           | Unique identifier for each circuit.                                         |
 |                  | circuit_name         | The name of the circuit.                                                    |
 |                  | location             | The location (city or region) where the circuit is located.                 |
 |                  | country              | The country where the circuit is located.                                   |
 |                  | number_of_turns      | The total number of turns in the circuit.                                   |
 |                  | length_in_km         | The total length of the circuit in kilometers.                              |
-| **status_codes** | status_id            | Unique identifier for each race status.                                     |
+| **t_status_codes** | status_id            | Unique identifier for each race status.                                     |
 |                  | status_name          | The name or description of the race status (e.g., finished, retired).       |
 |                  | status_category      | Category of the status (e.g., technical failure, collision, driver omission).|
 
@@ -229,11 +229,19 @@ By incorporating all three dimensions of ETL, the stored procedure ensures that 
 
 My assignment includes the development of 5 data marts, composed of 3 materialized views and 2 simple views, to support comprehensive analytics and provide valuable insights for potential research. These data marts are designed to align with the questions outlined in the analytical plan, ensuring that the analyses are targeted and relevant. Each data mart serves a specific purpose, facilitating easy access to critical metrics and trends for deeper exploration. Below is a description of these 5 data marts:
 
-1.	Materialized View: mv_constructors_technical_failures – This data mart identifies the most frequently occurring technical failures for each constructor, along with the percentage of each issue relative to their total technical failures. It helps highlight reliability concerns and potential areas for engineering improvements.
-2.	Materialized View: mv_circuit_technical_failures – This data mart focuses on the most common mechanical issues at different circuits, showing the frequency and proportion of each problem in relation to all technical failures at those circuits. It provides insights into circuit-specific challenges that teams face.
-3.	Materialized View: mv_age_group_avg_points – This view calculates the average points scored by drivers in different age groups. It helps analyze performance trends based on driver age, giving insights into how experience and age might correlate with race outcomes.
-4.	Simple View: pole_position_win_probability – This view displays the probability of a pole position driver (starting from Grid position 1) winning the race, broken down by circuit. It enables analysis of how circuit characteristics affect the likelihood of converting pole positions into race wins.
-5.	Simple View: country_driver_statistics – This view shows which countries have produced the most Formula 1 drivers and which have the best-performing drivers based on total points. It offers a geographical perspective on driver representation and success.
+** Materialized Views:** 
+
+mv_age_group_avg_points: This view calculates the average points scored by drivers in different age groups. It helps analyze performance trends based on driver age, giving insights into how experience and age might correlate with race outcomes.
+
+mv_constructors_technical_failures: This data mart identifies the most frequently occurring technical failures for each constructor, along with the percentage of each issue relative to their total technical failures. It helps highlight reliability concerns and potential areas for engineering improvements.
+
+mv_circuit_technical_failures: This data mart focuses on the most common mechanical issues at different circuits, showing the frequency and proportion of each problem in relation to all technical failures at those circuits. It provides insights into circuit-specific challenges that teams face.
+
+** "Simple" Views:** 
+
+pole_position_win_probability: This view displays the probability of a pole position driver (starting from Grid position 1) winning the race, broken down by circuit. It enables analysis of how circuit characteristics affect the likelihood of converting pole positions into race wins.
+
+country_driver_statistics: This view shows which countries have produced the most Formula 1 drivers and which have the best-performing drivers based on total points. It offers a geographical perspective on driver representation and success.
 
 These data marts are aligned with the analytical plan’s questions, providing targeted answers and supporting deeper research into performance patterns, reliability issues, and regional trends in Formula 1 racing. This structured approach ensures that the insights gained are both relevant and comprehensive, facilitating well-informed research and strategic decision-making.
 
