@@ -245,7 +245,7 @@ country_driver_statistics: This view shows which countries have produced the mos
 
 These data marts are aligned with the analytical plan’s questions, providing targeted answers and supporting deeper research into performance patterns, reliability issues, and regional trends in Formula 1 racing. This structured approach ensures that the insights gained are both relevant and comprehensive, facilitating well-informed research and strategic decision-making.
 
-## 8. Possible development opportunities
+## 8. Opportunities for future development
 
 This assignment was developed in alignment with the requirements of this course, focusing on building a robust data infrastructure and data marts to support potential analyses. While it establishes a strong foundation by creating an analytical_layer and five data marts (three materialized views and two simple views), it does not delve into in-depth analysis. There are numerous opportunities for further development in the analytical component to comprehensively answer the research questions outlined in the analytical plan.
 
