@@ -107,6 +107,10 @@ This description ties in your interest in F1 with a detailed explanation of the 
 > [!Note]
 > The original dataset contained 14 tables, including data on qualifications, championships, and other aspects of Formula 1. However, for the purposes of this research, the focus has been limited to races only. As a result, the additional tables related to qualifying sessions, championship standings, and other data were not utilized in the analysis.
 
+
+> [!Note]
+> The load of race_results table may take a couple of minutes as it includes 26,519 records but the command should work properly.
+
 ## 3. OPERATIONAL LAYER (OLTP)
 
 The operational layer of this project is designed to establish the foundational data structure for storing and managing Formula 1 race data. This part of the project sets up six essential tables, which will be populated with data imported from external CSV files. These tables include race_results, drivers, constructors, circuits, races, and status_codes. Each table is carefully constructed to align with the structure of the incoming data and ensure data consistency.
