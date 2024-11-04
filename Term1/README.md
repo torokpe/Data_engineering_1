@@ -229,7 +229,7 @@ By incorporating all three dimensions of ETL, the stored procedure ensures that 
 
 My assignment includes the development of 5 data marts, composed of 3 materialized views and 2 simple views, to support comprehensive analytics and provide valuable insights for potential research. These data marts are designed to align with the questions outlined in the analytical plan, ensuring that the analyses are targeted and relevant. Each data mart serves a specific purpose, facilitating easy access to critical metrics and trends for deeper exploration. Below is a description of these 5 data marts:
 
-** Materialized Views:** 
+**Materialized Views:** 
 
 mv_age_group_avg_points: This view calculates the average points scored by drivers in different age groups. It helps analyze performance trends based on driver age, giving insights into how experience and age might correlate with race outcomes.
 
@@ -237,7 +237,7 @@ mv_constructors_technical_failures: This data mart identifies the most frequentl
 
 mv_circuit_technical_failures: This data mart focuses on the most common mechanical issues at different circuits, showing the frequency and proportion of each problem in relation to all technical failures at those circuits. It provides insights into circuit-specific challenges that teams face.
 
-** "Simple" Views:** 
+**"Simple" Views:** 
 
 pole_position_win_probability: This view displays the probability of a pole position driver (starting from Grid position 1) winning the race, broken down by circuit. It enables analysis of how circuit characteristics affect the likelihood of converting pole positions into race wins.
 
