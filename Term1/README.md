@@ -30,6 +30,12 @@ Additionally, I developed an ETL pipeline that automates data loading and transf
 
 In conclusion, this project demonstrates the application of data engineering principles—such as database design, ETL pipelines, and data aggregation—using real-world Formula 1 data. In this way, this exercise is a comprehensive presentation of what we have learned in the first half of the course and I have tried to present it with a topic that is close to me personally.
 
+### How to run the program
+
+In the Resources folder, you will find the SQL code file named F1_data-warehouse_project.sql, which contains the complete setup for this project. This file includes all SQL commands required to create the necessary schema, tables, relationships, and data transformations for the F1 data warehouse. You can execute this script locally using MySQL Workbench to recreate the database environment on your own system. Simply open MySQL Workbench, load the file, and run the code to initiate the data warehouse for analysis.
+
+Additionally, the Data folder contains the relevant dataset files. These files are provided both at the table level and as a complete dataset in zip format, allowing for easy access and loading into the database. 
+
 ## 2. DATASET DESCRICPTION
 
 ### 2.1 Context
